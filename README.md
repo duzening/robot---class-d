@@ -4,6 +4,7 @@
 
 ## 课程作业目录
 
+- [Week 1：开启课程](week1/)
 - [Week 2：WSL、Ubuntu 与 ROS2 环境配置](week2/)
 - [Week 3：GitHub SSH、VS Code 与 ROS2 交互](week3/)
 - [Week 4：命令行、机器人基础与 Python 仿真](week4/)
