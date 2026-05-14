@@ -16,3 +16,70 @@ container 容器
 
 
 <img src="屏幕截图 2026-05-07 104619.png" alt="opencv" width="500">
+
+
+# Week 10：Docker 概念与 OpenCV 实验
+
+## 实验内容
+本周完成了以下任务：
+1. 学习 Docker 核心概念（镜像、容器）
+2. 掌握 Docker 基础命令（pull、run、ps 等）
+3. 理解容器与本地文件挂载（-v 参数）
+4. 安装 OpenCV 并进行基础图像处理实验
+5. 使用 Python 读取、显示和处理图像
+
+---
+
+## 实验截图
+
+### OpenCV 图像处理效果
+<img src="屏幕截图 2026-05-07 104619.png" alt="OpenCV处理" width="600">
+
+### Docker 容器运行示意
+<img src="屏幕截图 2026-05-07 104619.png" alt="Docker容器" width="600">
+
+---
+
+## 运行命令
+```bash
+# 拉取镜像
+docker pull <镜像名>
+
+# 运行容器
+docker run <镜像名>
+
+# 查看容器
+docker ps
+docker ps -a
+
+# 停止容器
+docker stop <容器ID>
+
+# 删除容器
+docker rm <容器ID>
+
+# 挂载本地目录运行 ROS2 容器
+docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m \
+  -v "$(pwd)/:/home/ws" \
+  ghcr.io/tiryoh/ros2-desktop-vnc:humble
+
+# 安装 OpenCV
+pip install opencv-python opencv-contrib-python
+
+# 解决 numpy 版本问题
+pip install "numpy<2"
+遇到的问题
+问题：Docker 容器无法启动
+解决：检查 Docker Desktop 是否运行，确认端口 6080 未被占用
+问题：OpenCV 导入失败
+解决：重新安装 OpenCV 或检查 pip 环境
+问题：图像颜色显示异常
+解决：使用 cv2.cvtColor(img, cv2.COLOR_BGR2RGB) 转换颜色空间
+学习心得
+
+通过本周学习，我理解了 Docker 镜像与容器的关系，以及容器化技术“环境隔离”的优势。同时掌握了基本 Docker 操作和目录挂载方法。
+在 OpenCV 实验中，我学会了图像读取、颜色空间转换和简单处理流程，为后续视觉感知学习打下基础。
+
+返回
+
+← 返回首页
