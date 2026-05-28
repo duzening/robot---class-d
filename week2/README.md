@@ -12,11 +12,11 @@
 
 ### Ubuntu 安装成功
 
-<img src="img/ubuntu-install.png" alt="Ubuntu 安装" width="600">
+<img src="ros2 小乌龟.jpg" alt="Ubuntu 安装" width="600">
 
 ### 小乌龟仿真运行
 
-<img src="img/turtlesim.png" alt="小乌龟" width="600">
+<img src="ros2 小乌龟.jpg" alt="小乌龟" width="600">
 
 ## 运行命令
 
