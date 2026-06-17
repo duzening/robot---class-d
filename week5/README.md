@@ -19,6 +19,7 @@ Week5
 ---
 
 ## 实验截图
+<img src="image.png" alt="仿真机器狗" width="500">
 
 ### 传感器数据示意
 
